@@ -1,0 +1,87 @@
+{
+  "dataset_id": "paperlane-v1-fixed-18",
+  "organization": "SYN-ORG-PAPERLANE",
+  "notice": "SYNTHETIC_POC_NOT_A_DEPLOYMENT",
+  "orders_clean": 240,
+  "orders_dirty": 8,
+  "inkwell_orders": 3,
+  "dq_failures": 10,
+  "dq_by_reason": {
+    "negative_amount": 2,
+    "missing_customer": 2,
+    "future_timestamp": 2,
+    "unknown_currency": 2,
+    "duplicate_event": 2
+  },
+  "silver_orders": 240,
+  "silver_events": 382,
+  "inkwell_in_silver": 0,
+  "gold_rows": 16,
+  "refund_count": 16,
+  "expected_refunds": 16,
+  "holdout_refunds": 4,
+  "expected_holdout_refunds": 4,
+  "majority_f1": 0.0,
+  "logistic_f1": 0.0,
+  "logistic_fpr": 0.0,
+  "recommendation": "majority",
+  "lineage": [
+    [
+      "silver_orders",
+      "bronze_orders"
+    ],
+    [
+      "silver_events",
+      "bronze_events"
+    ],
+    [
+      "gold_daily_category_revenue",
+      "silver_orders"
+    ],
+    [
+      "gold_order_features",
+      "silver_orders"
+    ],
+    [
+      "gold_order_features",
+      "silver_events"
+    ]
+  ],
+  "tokens": 0,
+  "price": "none",
+  "databricks_workspace": "not-run",
+  "kafka_broker": "not-run",
+  "cloud_storage": "local-files",
+  "unity_catalog": "not-run",
+  "lakeflow_service": "not-run",
+  "sql_warehouse": "not-run",
+  "hardware": {
+    "processor": "11th Gen Intel(R) Core(TM) i7-1185G7 @ 3.00GHz",
+    "cores": 4,
+    "logical_processors": 8,
+    "free_physical_memory_kb": 8961196,
+    "total_visible_memory_kb": 32916868,
+    "python": "3.12.10",
+    "system": "Windows"
+  },
+  "spark_sql": {
+    "rows": 40000,
+    "repeats": 40,
+    "partitioned": {
+      "min": 0.3707848999911221,
+      "p50": 0.4407844999950612,
+      "p95": 0.5313135000033071,
+      "max": 0.6718191999971168
+    },
+    "unpartitioned": {
+      "min": 0.3464862999971956,
+      "p50": 0.397024899997632,
+      "p95": 0.455856100001256,
+      "max": 0.4900269999925513
+    },
+    "engine": "spark-sql-local",
+    "sql_warehouse": "not-run",
+    "status": "ran",
+    "spark": "3.5.6"
+  }
+}

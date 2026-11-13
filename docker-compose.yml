@@ -1,0 +1,9 @@
+services:
+  poc:
+    image: databricks-lakehouse-customer-poc:ci
+    build: .
+    environment:
+      DATABRICKS_HOST: ""
+      KAFKA_BOOTSTRAP: ""
+      CLOUD_URI: ""
+      LAKEHOUSE_ALLOW_REMOTE: "0"

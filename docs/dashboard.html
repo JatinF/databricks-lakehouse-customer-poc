@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Paperlane POC report</title>
+<style>
+body { margin: 0; background: #f4f7fb; color: #102033; font-family: "Segoe UI", sans-serif; }
+header { background: #101820; color: white; padding: 24px 32px; }
+header p { color: #c5d0da; }
+main { padding: 24px 32px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+article { background: white; border: 1px solid #e1e8ef; box-shadow: 0 1px 2px #d9e3ec; padding: 16px; }
+h1 { margin: 0 0 8px; font-size: 22px; }
+h2 { margin: 0 0 8px; font-size: 16px; color: #0f5c6b; }
+.span { grid-column: 1 / -1; }
+table { border-collapse: collapse; width: 100%; }
+td { border-bottom: 1px solid #e1e8ef; padding: 6px 0; }
+.warn { color: #9a6700; }
+</style>
+</head>
+<body>
+<header>
+<h1>Paperlane lakehouse POC</h1>
+<p>SYNTHETIC_POC_NOT_A_DEPLOYMENT · Synthetic prospect · Deployment NO-GO</p>
+</header>
+<main>
+<article><h2>Organization</h2><p>SYN-ORG-PAPERLANE</p><p>paperlane-v1-fixed-18</p></article>
+<article><h2>Silver orders</h2><p>240</p><p>Refunds 16</p></article>
+<article><h2>Data-quality failures</h2><p>10</p><p class="warn">Quarantine, not deleted from bronze</p></article>
+<article class="span"><h2>Quality reasons</h2><table><tr><td>duplicate_event</td><td>2</td></tr><tr><td>future_timestamp</td><td>2</td></tr><tr><td>missing_customer</td><td>2</td></tr><tr><td>negative_amount</td><td>2</td></tr><tr><td>unknown_currency</td><td>2</td></tr></table></article>
+<article><h2>Model recommendation</h2><p>majority</p><p>Logistic F1 0.0</p><p>Majority F1 0.0</p></article>
+<article><h2>Services not contacted</h2><p>Databricks workspace not-run</p><p>Unity Catalog not-run</p><p>Lakeflow not-run</p><p>SQL warehouse not-run</p></article>
+<article><h2>Cost</h2><p>Price none</p><p>Tokens 0</p><p>Inkwell rows in silver 0</p></article>
+<article class="span"><h2>Local Spark SQL</h2><p>Partitioned p50 0.4407844999950612 s</p><p>Unpartitioned p50 0.397024899997632 s</p><p>40000 rows, 40 repeats, spark-sql-local. SQL warehouse not-run.</p><p>The partitioned p50 is higher on this run.</p></article>
+</main>
+</body>
+</html>

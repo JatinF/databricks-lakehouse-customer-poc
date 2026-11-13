@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="680" viewBox="0 0 1200 680">
+  <rect width="1200" height="680" fill="#f4f7fb"/>
+  <rect width="1200" height="72" fill="#101820"/>
+  <text x="40" y="46" fill="#ffffff" font-family="Segoe UI, sans-serif" font-size="26">What ran · and what stayed shut</text>
+  <g font-family="Segoe UI, sans-serif">
+    <rect x="40" y="108" width="520" height="520" rx="8" fill="#ffffff" stroke="#e1e8ef"/>
+    <text x="64" y="148" fill="#1f7a4d" font-size="20">Ran on this reference</text>
+    <text x="64" y="196" fill="#102033" font-size="16">Fixed orders and events</text>
+    <text x="64" y="232" fill="#102033" font-size="16">Quality quarantine</text>
+    <text x="64" y="268" fill="#102033" font-size="16">Pure silver and gold</text>
+    <text x="64" y="304" fill="#102033" font-size="16">Local grant enforcer</text>
+    <text x="64" y="340" fill="#102033" font-size="16">Logistic regression and majority baseline</text>
+    <text x="64" y="376" fill="#102033" font-size="16">MLflow file store</text>
+    <text x="64" y="412" fill="#102033" font-size="16">PySpark Delta MERGE when Java is present</text>
+    <text x="64" y="448" fill="#102033" font-size="16">Structured Streaming availableNow</text>
+    <text x="64" y="484" fill="#102033" font-size="16">Spark SQL text for the day query</text>
+    <text x="64" y="536" fill="#5c6b7a" font-size="15">Price none. Tokens 0.</text>
+    <text x="64" y="572" fill="#5c6b7a" font-size="15">No customer data.</text>
+
+    <rect x="600" y="108" width="560" height="520" rx="8" fill="#ffffff" stroke="#e1e8ef"/>
+    <text x="624" y="148" fill="#9b2c2c" font-size="20">Not run</text>
+    <text x="624" y="196" fill="#102033" font-size="16">Databricks workspace</text>
+    <text x="624" y="232" fill="#102033" font-size="16">Unity Catalog service</text>
+    <text x="624" y="268" fill="#102033" font-size="16">Lakeflow service</text>
+    <text x="624" y="304" fill="#102033" font-size="16">Databricks SQL warehouse</text>
+    <text x="624" y="340" fill="#102033" font-size="16">Kafka broker</text>
+    <text x="624" y="376" fill="#102033" font-size="16">Cloud object storage</text>
+    <text x="624" y="412" fill="#102033" font-size="16">Asset bundle deploy</text>
+    <text x="624" y="448" fill="#102033" font-size="16">Photon and warehouse cache</text>
+    <text x="624" y="500" fill="#5c6b7a" font-size="15">A remote URL is refused.</text>
+    <text x="624" y="536" fill="#5c6b7a" font-size="15">The error text omits the host.</text>
+    <text x="624" y="588" fill="#1e3a5f" font-size="16">Deployment decision: NO-GO</text>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+# Databricks Asset Bundle sketch. `databricks bundle deploy` was not run.
+# The CLI was not installed and no workspace host was set.
+bundle:
+  name: paperlane-poc
+
+targets:
+  dev:
+    mode: development
+    default: true
+
+resources:
+  pipelines:
+    paperlane_medallion:
+      name: paperlane-medallion
+      catalog: paperlane
+      schema: poc
+      libraries:
+        - file:
+            path: ../pipelines/paperlane_medallion.py

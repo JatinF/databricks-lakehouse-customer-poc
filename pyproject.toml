@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "databricks-lakehouse-customer-poc"
+version = "0.1.0"
+description = "Synthetic retailer lakehouse POC. Local Spark stand-in. Databricks services were not contacted."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{ name = "Jatinder Singh" }]
+dependencies = [
+  "mlflow==2.22.0",
+  "scikit-learn==1.5.2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6", "mypy>=1.11"]
+spark = ["pyspark==3.5.6", "delta-spark==3.3.0"]
+
+[project.scripts]
+lakehouse-poc = "lakehouse_poc.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+src = ["src", "tests", "scripts", "pipelines", "notebooks"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.ruff.lint.per-file-ignores]
+"pipelines/*" = ["F821"]
+"notebooks/*" = ["F821", "E402"]
+"src/lakehouse_poc/dashboard.py" = ["E501"]
+
+[tool.mypy]
+python_version = "3.12"
+mypy_path = "src"
+packages = ["lakehouse_poc"]
+disallow_untyped_defs = true
+warn_unused_ignores = true
+no_implicit_optional = true
+check_untyped_defs = true
+
+[[tool.mypy.overrides]]
+module = ["pyspark.*", "delta.*", "mlflow.*", "sklearn.*"]
+ignore_missing_imports = true
