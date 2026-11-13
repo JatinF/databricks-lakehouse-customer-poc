@@ -80,7 +80,7 @@ Local pytest: 12 passed. Ruff was clean. Mypy was clean on 14 source files. Thre
 
 Deployment decision: **NO-GO**.
 
-Databricks, Kafka, Unity Catalog, Lakeflow, and the SQL warehouse stay not-run. Details, including the solver warning and the Windows Spark binaries, are in [docs/limitations.md](docs/limitations.md). The 10–15 minute walkthrough is [docs/demo-script.md](docs/demo-script.md).
+Databricks, Kafka, Unity Catalog, Lakeflow, and the SQL warehouse stay not-run. A local image build was not run. The image proof is GitHub Actions `docker-build` check run 131801612988 in ci run 43400424053 on `50981fc27e26d3035a0601e598bcf44e6a2a340c`. The test check run is 131801613539. Security run 43400424021, scan check run 131801613186, succeeded on the same commit. All three annotation lists were empty. Details, including the solver warning and the Windows Spark binaries, are in [docs/limitations.md](docs/limitations.md). The 10–15 minute walkthrough is [docs/demo-script.md](docs/demo-script.md).
 
 This repository was written in a Grok Build session. See [docs/ai-sdlc.md](docs/ai-sdlc.md).
 

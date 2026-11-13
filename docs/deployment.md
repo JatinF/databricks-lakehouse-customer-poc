@@ -34,7 +34,14 @@ The reproducible path is the venv, `pip install -e ".[dev,spark]"`, and pytest. 
 
 `.github/workflows/security.yml` runs `scripts/reject_private_keys.py`. The private-key markers in that file are split so the scanner does not match itself.
 
-The first commit does not list Actions run ids. Those ids belong in a later commit after the jobs finish and the annotation lists are empty.
+Actions on `50981fc27e26d3035a0601e598bcf44e6a2a340c`:
+
+| Workflow | Run | Check runs |
+| --- | --- | --- |
+| ci | 43400424053 | docker-build 131801612988, test 131801613539 |
+| security | 43400424021 | scan 131801613186 |
+
+Each of those three annotation lists was empty. Docker image proof is the `docker-build` check run above. A local Docker build was not run.
 
 ## Gates
 
